@@ -1,0 +1,128 @@
+#products{
+    width:99%;
+    margin:0px auto;
+    margin-top: 40px;
+}
+ #products-top{
+    width:90%;
+    margin:0px auto;
+    margin-left: 20px;
+}
+
+#products h1{
+    font-size: 34px;
+    color:#121213ce;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+#sort{
+    border: 1px solid rgb(201, 199, 199);
+    width:100%;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#sort h3{
+    font-size: 20px;
+    color: gray;
+    padding-left:20px;
+    padding-top:10px;
+}
+#sort span{
+    color:rgba(0, 0, 0, 0.719);;
+}
+#sort i{
+    font-size: 22px;
+    color: rgba(34, 33, 33, 0.849);
+    padding:15px;
+    padding-right: 40px;
+}
+#products-bottom{
+    width:90%;
+    margin:0px auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#filters{
+    width:90%;
+    margin:20px 0px;
+    border: 1px solid rgb(201, 199, 199);
+    margin-top: 10px;
+    padding:0px 20px;
+    border-radius: 5px;
+    padding-top: 30px;
+}
+#filters h3{
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.719);
+}
+#filters h4{
+    color:#636569d7;
+    margin-bottom: 20px;
+}
+#category{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#category h3{
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.719);
+}
+#category i{
+    font-size: 22px;
+    color: rgba(34, 33, 33, 0.692);
+    margin-right:20px
+}
+#checkbox-top{
+    border: 1px solid rgb(141, 138, 138);
+    margin:0px auto;
+    width:90%;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+#checkbox-top input{
+    width:80%;
+    height:50px;
+    border:none;
+    font-size: 16px;
+    outline: none;
+    display: none;
+}
+#checkbox-top i{
+    font-size: 24px;
+}
+#checkbox-bottom{
+    display: none;
+    margin:0px auto;
+    width:90%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#checkbox-bottom label{
+    font-size: 20px;
+    color:rgb(92, 90, 90);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+
+}
+#checkbox-list{
+    width: 20px;
+    height:20px;
+    margin-top: 20px;
+}
+#checkbox-bottom h4{
+    color:purple;
+    padding-left:30px;
+    padding-top: 20px;
+    font-size: 18px;
+} 

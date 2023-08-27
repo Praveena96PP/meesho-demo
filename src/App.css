@@ -1,0 +1,11 @@
+#menu{
+width:100%;
+}
+#menu-left{
+  width:30%;
+  float:left;
+}
+#menu-right{
+  width:70%;
+  float:right;
+}
