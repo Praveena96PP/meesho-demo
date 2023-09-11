@@ -49,7 +49,11 @@ function Products() {
               <div id="products-top">
                 <div className="sort" onClick={()=>setIsShow(!isShow)}>
                 <h4>Sort by: <span>Relevance</span></h4>
-                <i class="fa-solid fa-angle-down"></i>
+                
+                {!isShow ? (<i class="fa-solid fa-angle-down"></i>):
+                (<i class="fa-solid fa-angle-up"></i>)}
+
+                {/* <i class="fa-solid fa-angle-down"></i> */}
                 </div>
               </div>
               {isShow && <div class="sortList">
@@ -70,7 +74,11 @@ function Products() {
                     <h3>FILTERS</h3>
                     <h5>1000+ Products</h5>
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow1(!isShow1)}><h3>Category</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow1(!isShow1)}><h3>Category</h3>
+                    {!isShow1 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
+                    
                     { isShow1 && <div class="checkbox">
                         <div id="checkbox-top">
                           <i class="fa-solid fa-magnifying-glass"></i>
@@ -94,7 +102,11 @@ function Products() {
                         </div>
                       </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow2(!isShow2)}><h3>Gender</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow2(!isShow2)}><h3>Gender</h3>
+                    {!isShow2 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
+
                     {isShow2 && <div class="checkbox1">
                     <ul>
                       <li><a href="#">Boys</a></li>
@@ -105,7 +117,10 @@ function Products() {
                   </div>
                     }
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow3(!isShow3)}><h3>Fabric</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow3(!isShow3)}><h3>Fabric</h3>
+                    {!isShow3 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow3 && <div class="checkbox2">
                   <div id="checkbox2-top">
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -130,18 +145,27 @@ function Products() {
 
                     }
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow4(!isShow4)}><h3>Oxfords</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow4(!isShow4)}><h3>Oxfords</h3>
+                    {!isShow4 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow4 && <div class="checkbox3">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Heels</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow5(!isShow5)}><h3>dail_shape</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow5(!isShow5)}><h3>dail_shape</h3>
+                    {!isShow5 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow5 && <div class="checkbox4">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Round</a></label>
                     </div>
                     }
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow6(!isShow6)}><h3>Color</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow6(!isShow6)}><h3>Color</h3>
+                    {!isShow6 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow6 && <div class="checkbox5">
                     <ul>
                       <li><a href="#">Beige</a></li>
@@ -161,12 +185,18 @@ function Products() {
                   </div>
                     }
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow7(!isShow7)}><h3>Smartcoins</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow7(!isShow7)}><h3>Smartcoins</h3>
+                    {!isShow7 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow7 && <div class="checkbox6">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Get Smartcoins</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow8(!isShow8)}><h3>Price</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow8(!isShow8)}><h3>Price</h3>
+                    {!isShow8 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow8 && <div class="checkbox7">
                     <ul>
                       <li><a href="#">Under &#8377; 149</a></li>
@@ -186,34 +216,52 @@ function Products() {
                     <h4><a href="#">Show More</a></h4>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow9(!isShow9)}><h3>Meesho Mall</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow9(!isShow9)}><h3>Meesho Mall</h3>
+                    {!isShow9 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow9 && <div class="checkbox8">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Mall Brands</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow10(!isShow10)}><h3>Occassion</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow10(!isShow10)}><h3>Occassion</h3>
+                    {!isShow10 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow10 && <div class="checkbox9">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Bridal</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Festival</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow11(!isShow11)}><h3>Combo of</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow11(!isShow11)}><h3>Combo of</h3>
+                    {!isShow11 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow11 && <div class="checkbox10">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Couples Set</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow12(!isShow12)}><h3>Kurta_fabric</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow12(!isShow12)}><h3>Kurta_fabric</h3>
+                    {!isShow12 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow12 && <div class="checkbox11">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Acrylic</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Polycotton</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow13(!isShow13)}><h3>Dupatta Color</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow13(!isShow13)}><h3>Dupatta Color</h3>
+                    {!isShow13 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow13 && <div class="checkbox12 hide">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Purple</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow14(!isShow14)}><h3>Discount</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow14(!isShow14)}><h3>Discount</h3>
+                    {!isShow14 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow14 && <div class="checkbox13 hide">
                   <ul>
                     <li><a href="#">10% And Above</a></li>
@@ -230,7 +278,10 @@ function Products() {
                   </ul>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow15(!isShow15)}><h3>Rating</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow15(!isShow15)}><h3>Rating</h3>
+                    {!isShow15 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow15 && <div class="checkbox14">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">2.0 and above</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">3.0 and above</a></label><br/>
@@ -239,7 +290,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">M-Trusted</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow16(!isShow16)}><h3>Size</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow16(!isShow16)}><h3>Size</h3>
+                    {!isShow16 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow16 && <div class="checkbox15">
                     <div id="checkbox15-top">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -262,7 +316,10 @@ function Products() {
                   </div>
                   </div>}
                     <hr/> 
-                    <div className="category"onClick={()=>setIsShow17(!isShow17)}><h3>Combo</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow17(!isShow17)}><h3>Combo</h3>
+                    {!isShow17 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow17 && <div class="checkbox16">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Combos</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Multipack</a></label><br/>
@@ -279,33 +336,51 @@ function Products() {
                     <h4><a href="#">Show More</a></h4>
                     </div>}
                     <hr/> 
-                    <div className="category"onClick={()=>setIsShow18(!isShow18)}><h3>operating_voltage</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow18(!isShow18)}><h3>operating_voltage</h3>
+                    {!isShow18 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow18 && <div class="checkbox17">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">100 Volts</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow19(!isShow19)}><h3>power_consumption</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow19(!isShow19)}><h3>power_consumption</h3>
+                    {!isShow19 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow19 && <div class="checkbox18">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">100 Watts</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow20(!isShow20)}><h3>Reversible</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow20(!isShow20)}><h3>Reversible</h3>
+                    {!isShow20 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow20 && <div class="checkbox19">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">No</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow21(!isShow21)}><h3>used_for</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow21(!isShow21)}><h3>used_for</h3>
+                    {!isShow21 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow21 && <div class="checkbox20">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Carpet Sofa</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow22(!isShow22)}><h3>body_material</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow22(!isShow22)}><h3>body_material</h3>
+                    {!isShow22 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow22 && <div class="checkbox21">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Abs Plastic</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Stainless Steel</a></label>
                    </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow23(!isShow23)}><h3>Material</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow23(!isShow23)}><h3>Material</h3>
+                    {!isShow23 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow23 && <div class="checkbox22">
                       <div id="checkbox22-top">
                       <i class="fa-solid fa-magnifying-glass"></i>
@@ -328,7 +403,10 @@ function Products() {
                     </div>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow24(!isShow24)}><h3>Bottom Length</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow24(!isShow24)}><h3>Bottom Length</h3>
+                    {!isShow24 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow24 && <div class="checkbox23">
                     <ul>
                       <li><a href="#">2 mtrs</a></li>
@@ -347,7 +425,10 @@ function Products() {
                     <h4><a href="#">Show More</a></h4>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow25(!isShow25)}><h3>Print or Pattern Type</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow25(!isShow25)}><h3>Print or Pattern Type</h3>
+                    {!isShow25 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow25 && <div class="checkbox24">
                     <div id="checkbox24-top">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -370,7 +451,10 @@ function Products() {
                   </div>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow26(!isShow26)}><h3>Bottom Style</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow26(!isShow26)}><h3>Bottom Style</h3>
+                    {!isShow26 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow26 && <div class="checkbox25">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Anarkali</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Banarasi</a></label><br/>
@@ -383,7 +467,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Rajputani</a></label>
                    </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow27(!isShow27)}><h3>Bottomwear Fabric</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow27(!isShow27)}><h3>Bottomwear Fabric</h3>
+                    {!isShow27 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow27 && <div class="checkbox26">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Art Silk</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Georgette</a></label><br/>
@@ -395,7 +482,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Velvet</a></label><br/>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow28(!isShow28)}><h3>Ornamentation</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow28(!isShow28)}><h3>Ornamentation</h3>
+                    {!isShow28 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow28 && <div class="checkbox27">
                     <div id="checkbox27-top">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -418,7 +508,10 @@ function Products() {
                   </div>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow29(!isShow29)}><h3>Bottom Pattern Type</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow29(!isShow29)}><h3>Bottom Pattern Type</h3>
+                    {!isShow29 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow29 && <div class="checkbox28">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Applique</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Checked</a></label><br/>
@@ -433,7 +526,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Woven Design</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow30(!isShow30)}><h3>Border</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow30(!isShow30)}><h3>Border</h3>
+                    {!isShow30 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow30 && <div class="checkbox29">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Border</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Embellished</a></label><br/>
@@ -448,7 +544,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Zari</a></label>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow31(!isShow31)}><h3>Surface Styling</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow31(!isShow31)}><h3>Surface Styling</h3>
+                    {!isShow31 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow31 && <div class="checkbox30">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Aari Work</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Applique</a></label><br/>
@@ -465,7 +564,10 @@ function Products() {
                     <h4><a href="#">Show More</a></h4>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow32(!isShow32)}><h3>Back Type</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow32(!isShow32)}><h3>Back Type</h3>
+                    {!isShow32 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow32 && <div class="checkbox31">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Backlers</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Collar</a></label><br/>
@@ -479,7 +581,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">V neck</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow33(!isShow33)}><h3>Top Pattern</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow33(!isShow33)}><h3>Top Pattern</h3>
+                    {!isShow33 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow33 && <div class="checkbox32">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Applique</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Checked</a></label><br/>
@@ -494,7 +599,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Striped</a></label>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow34(!isShow34)}><h3>Fit/ Shape</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow34(!isShow34)}><h3>Fit/ Shape</h3>
+                    {!isShow34 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow34 && <div class="checkbox33">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Aari Work</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Applique</a></label><br/>
@@ -511,7 +619,10 @@ function Products() {
                     <h4><a href="#">Show More</a></h4>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow35(!isShow35)}><h3>Inner Fabric</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow35(!isShow35)}><h3>Inner Fabric</h3>
+                    {!isShow35 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow35 && <div class="checkbox34">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Cancan</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Cotton</a></label><br/>
@@ -519,12 +630,18 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Satin</a></label><br/>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow36(!isShow36)}><h3>Loom Type</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow36(!isShow36)}><h3>Loom Type</h3>
+                    {!isShow36 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow36 && <div class="checkbox35">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Powerloom</a></label><br/>
                     </div>}
                     <hr/> 
-                    <div className="category"onClick={()=>setIsShow37(!isShow37)}><h3>Top Type</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow37(!isShow37)}><h3>Top Type</h3>
+                    {!isShow37 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow37 && <div class="checkbox36">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Crop Top</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Jacket</a></label><br/>
@@ -537,7 +654,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Tunic</a></label><br/>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow38(!isShow38)}><h3>Brand</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow38(!isShow38)}><h3>Brand</h3>
+                    {!isShow38 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow38 && <div class="checkbox37">
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Apple iphone</a></label><br/>
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Huawei</a></label><br/>
@@ -552,7 +672,10 @@ function Products() {
                     <input type="checkbox" name="checkbox-list" id="checkbox-list"/><label><a href="#">Vivo</a></label><br/>
                     </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow39(!isShow39)}><h3>Compatible Models</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow39(!isShow39)}><h3>Compatible Models</h3>
+                    {!isShow39 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow39 && <div class="checkbox38">
                     <div id="checkbox38-top">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -575,7 +698,10 @@ function Products() {
                     </div>
                   </div>}
                     <hr/>
-                    <div className="category"onClick={()=>setIsShow40(!isShow40)}><h3>Warranty Period</h3><i class="fa-solid fa-angle-down"></i></div>
+                    <div className="category"onClick={()=>setIsShow40(!isShow40)}><h3>Warranty Period</h3>
+                    {!isShow40 ? (<i class="fa-solid fa-angle-down"></i>):
+                    (<i class="fa-solid fa-angle-up"></i>)}
+                    </div>
                     {isShow40 && <div class="checkbox39">
                     <ul>
                       <li><a href="#">1 Month</a></li>
