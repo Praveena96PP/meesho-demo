@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Component/Catalogue.css'
 import cat1 from '../Component/images/cat1.jpg'
 import cat2 from '../Component/images/cat2.jpg'
@@ -16,172 +16,47 @@ import cat13 from '../Component/images/cat13.jpg'
 import cat14 from '../Component/images/cat14.jpg'
 import cat15 from '../Component/images/cat15.jpg'
 function Catalogue() {
+    const[cards]=useState([
+        {img:cat1, title:"Bluetooth Headphones & Accessories", price:"259", delivery:"Delivery Rs.90",rating:"3.8",review:"82018"},
+        {img:cat2, title:"Vishvambari Premium", price:"161", delivery:"Free Delivery",rating:"4.0",review:"6138"},
+        {img:cat3, title:"VStylish Modern Women", price:"127", delivery:"Free Delivery",rating:"3.8",review:"239"},
+        {img:cat4, title:"Saree & cloths storage boxes", price:"294", delivery:"Free Delivery",rating:"4.1",review:"556"},
+        {img:cat5, title:"Fancy Latest women Dresses", price:"359", delivery:"Free Delivery",rating:"3.8",review:"406"},
+        {img:cat6, title:"Elite Women Analog Watches", price:"400", delivery:"Delivery Rs.76",rating:"3.8",review:"67"},
+        {img:cat7, title:"Eyebogler Men's T-shirts", price:"297", delivery:"Free Delivery",rating:"3.6",review:"6176167"},
+        {img:cat8, title:"Modern Unique Trendy Kitchen items", price:"148", delivery:"Free Delivery",rating:"4.2",review:"42853"},
+        {img:cat9, title:"Trendy Feminine Women Tops", price:"217", delivery:"Free Delivery",rating:"3.6",review:"17616"},
+        {img:cat10, title:"Stylish Glamorous Men Shirt", price:"332", delivery:"Free Delivery",rating:"3.7",review:"11259"},
+        {img:cat11, title:"Trendy Revising Men T-shirts", price:"189", delivery:"Free Delivery",rating:"3.8",review:"46145"},
+        {img:cat12, title:"Flawsome Stylish Kids dress", price:"256", delivery:"Free Delivery",rating:"4.0",review:"2401"},
+        {img:cat13, title:"36H SKTECH EYELINERS", price:"95", delivery:"Free Delivery",rating:"3.8",review:"3048"},
+        {img:cat14, title:"Fancy Others Kitchen Tools", price:"117", delivery:"Free Delivery",rating:"4.1",review:"236"},
+        {img:cat15, title:"Shimmering Fusion Jewellery", price:"203", delivery:"Free Delivery",rating:"4.1",review:"5381"},
+    ])
+    
     return (
-        <div id="main">
+        <div>
             <div id="catalogue">
-                <div class="catalogue-one">
-                    <div class="one-img">
-                        <a href="#"><img src={cat1} alt="catalogue1"/></a>
-                        <a herf="#"><h3>Bluetooth Headphones & ...</h3></a>
-                        <a herf="#"><h2>&#8377;259 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Delivery &#8377;90</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>82018 Reviews</h5></a>
+                
+                    {
+                    cards.map((card, i)=>(
+                        <div key={i} className='one-img'>
+                            <a href="#"><img src={card.img}/></a>
+                            <a herf="#"><h3>{card.title}</h3></a>
+                            <a herf="#"><h4>&#8377;{card.price} <span>onwards</span></h4></a>
+                            <a href="#"><button class="btn1">{card.delivery}</button></a>
+                            <div className="div">
+                            <a href="#"><button class="btn2">{card.rating}<i class="fa-solid fa-star"></i></button></a>
+                            <a href='#'><h5>{card.review} Reviews</h5></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat2} alt="catalogue2"/></a>
-                        <a herf="#"><h3>Vishvambari Premium h...</h3></a>
-                        <a herf="#"><h2>&#8377;161 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.0<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>6138 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat3} alt="catalogue3"/></a>
-                        <a herf="#"><h3>Stylish Modern Women...</h3></a>
-                        <a herf="#"><h2>&#8377;271 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>239 Reviews</h5></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalogue-one">
-                    <div class="one-img">
-                        <a href="#"><img src={cat4} alt="catalogue4"/></a>
-                        <a herf="#"><h3>Saree & cloths storage box.</h3></a>
-                        <a herf="#"><h2>&#8377;294 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.1<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>556 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat5} alt="catalogue5"/></a>
-                        <a herf="#"><h3>Fancy Latest women Dre...</h3></a>
-                        <a herf="#"><h2>&#8377;359 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>406 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat6} alt="catalogue6"/></a>
-                        <a herf="#"><h3>Elite Women Analog Wa...</h3></a>
-                        <a herf="#"><h2>&#8377;105 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Delivery &#8377;76</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>67 Reviews</h5></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalogue-one">
-                    <div class="one-img">
-                        <a href="#"><img src={cat7} alt="catalogue7"/></a>
-                        <a herf="#"><h3>Eyebogler Men's T-shirt c...</h3></a>
-                        <a herf="#"><h2>&#8377;297 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.6<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>17616 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat8} alt="catalogue8"/></a>
-                        <a herf="#"><h3>Modern Unique Trendy K..</h3></a>
-                        <a herf="#"><h2>&#8377;148 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.2<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>42853 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat9} alt="catalogue9"/></a>
-                        <a herf="#"><h3>Trendy Feminine Women...</h3></a>
-                        <a herf="#"><h2>&#8377;217 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1"> Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.9<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>67411 Reviews</h5></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalogue-one">
-                    <div class="one-img">
-                        <a href="#"><img src={cat10} alt="catalogue10"/></a>
-                        <a herf="#"><h3>Stylish Glamorous Men S...</h3></a>
-                        <a herf="#"><h2>&#8377;332 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.7<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>11259 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat11} alt="catalogue11"/></a>
-                        <a herf="#"><h3>Trendy Revising Men T-s...</h3></a>
-                        <a herf="#"><h2>&#8377;189 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>46145 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat12} alt="catalogue12"/></a>
-                        <a herf="#"><h3>Flawsome Stylish Kids B.....</h3></a>
-                        <a herf="#"><h2>&#8377;256 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1"> Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.0<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>2401 Reviews</h5></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalogue-one">
-                    <div class="one-img">
-                        <a href="#"><img src={cat13} alt="catalogue13"/></a>
-                        <a herf="#"><h3>36H SKTECH EYELINERS....</h3></a>
-                        <a herf="#"><h2>&#8377;95 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">3.8<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>3048 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat14} alt="catalogue14"/></a>
-                        <a herf="#"><h3>Fancy Others Kitchen To.....</h3></a>
-                        <a herf="#"><h2>&#8377;117 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1">Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.1<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>236 Reviews</h5></a>
-                        </div>
-                    </div>
-                    <div class="one-img">
-                        <a href="#"><img src={cat15} alt="catalogue15"/></a>
-                        <a herf="#"><h3>Shimmering Fusion Jewel..</h3></a>
-                        <a herf="#"><h2>&#8377;203 <span>onwards</span></h2></a>
-                        <a href="#"><button class="btn1"> Free Delivery</button></a>
-                        <div class="div">
-                            <a href="#"><button class="btn2">4.1<i class="fa-solid fa-star"></i></button></a>
-                            <a href='#'><h5>5381 Reviews</h5></a>
-                        </div>
-                    </div>
-                </div>
+                    
+                    ))
+                    }
+                
             </div>
         </div>
-    )
+    );
 }
 
-export default Catalogue
+export default Catalogue;

@@ -36,8 +36,8 @@ function Banner() {
                 <h1 id="heading1">Lowest Prices <br/>Best Quality Shopping</h1>
                 <ul>
                     <li><i class="fa-solid fa-truck"></i>Free <br/>Delivery</li>
-                    <li class="line"><i class="fa-solid fa-sack-dollar"></i>Cash on <br/>Delivery</li>
-                    <li class="line"><i class="fa-solid fa-right-left"></i>Easy <br/>   Returns</li>
+                    <li className="line"><i class="fa-solid fa-sack-dollar"></i>Cash on <br/>Delivery</li>
+                    <li className="line"><i class="fa-solid fa-right-left"></i>Easy <br/>   Returns</li>
                 </ul>
                 <button id="btn1"type="submit"><i class="fa-brands fa-google-play"></i>Download the Meesho App</button>
                 </div>
@@ -170,7 +170,7 @@ function Banner() {
                     <li>|</li>
                     <li><i class="fa-solid fa-circle-check"></i>Sell all over India</li>
                 </ul>
-                <button>Sign up<br/>now</button>
+                <button>Sign up now</button>
                 </a>
                 </div>
                 <div id="ban6-right">
